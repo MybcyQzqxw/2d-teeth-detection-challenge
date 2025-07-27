@@ -58,7 +58,7 @@
 - CUDA支持的GPU（推荐）
 - Docker（可选）
 
-### 安装方法
+### 环境配置
 
 ```bash
 # 克隆仓库
@@ -71,6 +71,32 @@ conda activate teeth-detection
 
 # 安装依赖
 pip install -r requirements.txt
+```
+
+### 数据预处理
+
+- 下载地址：<https://zenodo.org/records/7812323>
+- 解压至 `data/raw/` 目录下，目录结构如下：
+
+```
+data/raw/
+├── training_data/
+│   └── quadrant_enumeration_disease/
+│       └── xrays/                    # 原始X光片图像
+├── masks/                            # 原始分割掩码
+```
+
+```bash
+# 原始数据处理
+python src/data/scripts/process_raw_train.py
+python src/data/scripts/process_raw_masks.py
+
+# 创建数据集
+python src/data/scripts/make_tooth_dataset.py
+python src/data/scripts/make_tooth_segmentation_dataset.py
+
+# 训练测试集划分
+python src/data/scripts/train_test_split.py
 ```
 
 ### 使用方法
@@ -118,23 +144,6 @@ python src/model/vgg/scripts/test.py
 - `src/model/faster_rcnn/scripts/config.yml`
 - `src/model/unet/scripts/config.yml`
 - `src/model/vgg/scripts/config.yml`
-
-## 📝 数据预处理
-
-项目提供了完整的数据预处理管道：
-
-```bash
-# 原始数据处理
-python src/data/scripts/process_raw_train.py
-python src/data/scripts/process_raw_masks.py
-
-# 创建数据集
-python src/data/scripts/make_tooth_dataset.py
-python src/data/scripts/make_tooth_segmentation_dataset.py
-
-# 训练测试集划分
-python src/data/scripts/train_test_split.py
-```
 
 ## 🤝 贡献指南
 
