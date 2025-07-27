@@ -76,7 +76,7 @@ pip install -r requirements.txt
 ### 数据预处理
 
 - 下载地址：<https://zenodo.org/records/7812323>
-- 解压至 `src/data/raw/` 目录下，目录结构如下：
+- 解压至 `data/raw/` 目录下，目录结构如下：
 
 ```
 data/raw/
@@ -130,7 +130,7 @@ python src/model/vgg/scripts/train.py
 python src/model/faster_rcnn/scripts/predict.py --input /path/to/image --output /path/to/output
 
 例如：
-python src/model/faster_rcnn/scripts/predict.py --input /src/data/raw/validation_data/quadrant_enumeration_disease/xrays --output /src/output
+python src/model/faster_rcnn/scripts/predict.py --input data/raw/validation_data/quadrant_enumeration_disease/xrays --output output
 ```
 
 #### 模型测试
