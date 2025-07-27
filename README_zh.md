@@ -60,31 +60,17 @@
 
 ### 安装方法
 
-#### 方法1: 使用pip安装
-
 ```bash
 # 克隆仓库
 git clone https://github.com/MybcyQzqxw/2d-teeth-detection-challenge.git
 cd 2d-teeth-detection-challenge
 
 # 创建虚拟环境
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# 或
-venv\Scripts\activate     # Windows
+conda create -n teeth-detection python=3.9 -y
+conda activate teeth-detection
 
 # 安装依赖
 pip install -r requirements.txt
-```
-
-#### 方法2: 使用Docker
-
-```bash
-# 构建Docker镜像
-docker build -t teeth-detection .
-
-# 运行容器
-docker run -it --gpus all -v $(pwd):/workspace teeth-detection
 ```
 
 ### 使用方法
