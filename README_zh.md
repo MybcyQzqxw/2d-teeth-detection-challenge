@@ -92,7 +92,7 @@ data/raw/
 │   │   └── train_quadrant_enumeration_disease.json
 │   └── unlabelled/
 │       └── xrays/
-├── validation_data/quadrant_enumeration_disease/xrays/
+└── validation_data/quadrant_enumeration_disease/xrays/
 ```
 
 ```bash
