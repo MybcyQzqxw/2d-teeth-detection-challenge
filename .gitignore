@@ -7,3 +7,4 @@ visualizations/*
 pretrained_models/*
 2d-teeth-detection-challenge*
 input/**
+**/__pycache__/

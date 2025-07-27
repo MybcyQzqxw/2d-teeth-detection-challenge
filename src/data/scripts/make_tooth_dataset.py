@@ -3,7 +3,9 @@ This script is designed to enrich the "quadrant_enumeration_disease" dataset by 
 The first stage of the script operates by utilizing the Faster-RCNN model to derive predictions for every sample in the dataset.
 Following this, any teeth that do not exhibit a substantial overlap with the identified unhealthy teeth are added to the dataset.
 """
+import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 
 import numpy as np
 import torch
