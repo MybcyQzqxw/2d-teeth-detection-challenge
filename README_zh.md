@@ -81,9 +81,18 @@ pip install -r requirements.txt
 ```
 data/raw/
 ├── training_data/
-│   └── quadrant_enumeration_disease/
-│       └── xrays/                    # 原始X光片图像
-├── masks/                            # 原始分割掩码
+│   ├── quadrant/
+│   │   ├── xrays/
+│   │   └── train_quadrant.json
+│   ├── quadrant_enumeration/
+│   │   ├── xrays/
+│   │   └── train_quadrant_enumeration.json
+│   ├── quadrant-enumeration-disease/
+│   │   ├── xrays/
+│   │   └── train_quadrant_enumeration_disease.json
+│   └── unlabelled/
+│       └── xrays/
+├── validation_data/quadrant_enumeration_disease/xrays/
 ```
 
 ```bash
@@ -119,6 +128,9 @@ python src/model/vgg/scripts/train.py
 ```bash
 # 使用训练好的模型进行预测
 python src/model/faster_rcnn/scripts/predict.py --input /path/to/image --output /path/to/output
+
+例如：
+python src/model/faster_rcnn/scripts/predict.py --input /src/data/raw/validation_data/quadrant_enumeration_disease/xrays --output /src/output
 ```
 
 #### 模型测试
