@@ -11,8 +11,8 @@ from torchvision.io import read_image
 from torchvision.ops import box_iou
 from tqdm import tqdm
 
-from model.faster_rcnn.faster_rcnn import FasterRCNN
-from utils.processors import UniqueClassNMSProcessor
+from src.model.faster_rcnn.faster_rcnn import FasterRCNN
+from src.utils.processors import UniqueClassNMSProcessor
 
 
 class FilterOverlappingBoxes:
