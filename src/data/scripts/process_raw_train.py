@@ -2,6 +2,7 @@
 Nest annotations inside images.
 """
 import json
+import os
 
 from tqdm import tqdm
 
@@ -73,6 +74,8 @@ if __name__ == "__main__":
     train_quadrant_enumeration_disease_processed = merge_targets_for_overlapping_boxes(
         train_quadrant_enumeration_disease_processed
     )
+
+    os.makedirs("data/processed", exist_ok=True)
 
     # Save labels
     with open("data/processed/train_quadrant.json", 'w') as f:
