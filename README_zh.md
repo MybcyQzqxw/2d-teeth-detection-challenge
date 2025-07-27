@@ -129,15 +129,6 @@ python src/model/faster_rcnn/scripts/test.py
 python src/model/vgg/scripts/test.py
 ```
 
-## 📈 性能指标
-
-| 模型 | 精确率 | 召回率 | F1分数 | mAP |
-|------|--------|--------|--------|-----|
-| Faster R-CNN | - | - | - | - |
-| U-Net + VGG | - | - | - | - |
-
-*注：具体性能指标需要根据实际训练结果更新*
-
 ## 🔧 配置文件
 
 每个模型都有对应的配置文件：
