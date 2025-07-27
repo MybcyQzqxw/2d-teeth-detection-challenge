@@ -77,7 +77,8 @@ pip install -r requirements.txt
 
 - 下载地址：<https://zenodo.org/records/7812323>
 - 解压至 `data/raw/` 目录下，目录结构如下
-  - 【注意是项目根目录下的 `data` 文件夹！】
+  - 【注意是项目根目录下的 `data` 文件夹（新建）！】
+  - 【注意源数据集中 `quadrant_enumeration_disease` 文件夹命名有误，须修改！】
 
 ```
 data/raw/
@@ -88,7 +89,7 @@ data/raw/
 │   ├── quadrant_enumeration/
 │   │   ├── xrays/
 │   │   └── train_quadrant_enumeration.json
-│   ├── quadrant-enumeration-disease/
+│   ├── quadrant_enumeration_disease/
 │   │   ├── xrays/
 │   │   └── train_quadrant_enumeration_disease.json
 │   └── unlabelled/
