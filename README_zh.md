@@ -76,7 +76,8 @@ pip install -r requirements.txt
 ### 数据预处理
 
 - 下载地址：<https://zenodo.org/records/7812323>
-- 解压至 `data/raw/` 目录下，目录结构如下：
+- 解压至 `data/raw/` 目录下，目录结构如下
+  - 【注意是项目根目录下的 `data` 文件夹！】
 
 ```
 data/raw/
